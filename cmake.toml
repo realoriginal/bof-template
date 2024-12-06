@@ -1,0 +1,18 @@
+# Reference: https://build-cpp.github.io/cmkr/cmake-toml
+[cmake]
+version = "3.19"
+cmkr-include = "cmake/cmkr.cmake"
+
+[project]
+name = "bof-template"
+include-after = [ "cmake/bof.cmake" ]
+
+[template.bof]
+type = "custom"
+add-function = "add_bof_executable"
+
+[target.bof-template]
+type = "bof"
+sources = [ 
+	"src/*.c"
+]
