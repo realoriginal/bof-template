@@ -58,7 +58,7 @@ function(add_bof_executable tgt)
 			POST_BUILD
 			USES_TERMINAL
 			COMMENT "Downloading the GNU LD linker from musl.cc"
-			COMMAND ${CMAKE_COMMAND} -E env bash -c "wget -q -O - https://musl.cc/i686-w64-mingw32-cross.tgz | tar -zxf - i686-w64-mingw32-cross/i686-w64-mingw32-ld.bfd --strip-components=2"
+			COMMAND ${CMAKE_COMMAND} -E env bash -c "wget -q -O - https://musl.cc/i686-w64-mingw32-cross.tgz | tar -zxf - i686-w64-mingw32-cross/bin/i686-w64-mingw32-ld.bfd --strip-components=2"
 			VERBATIM
 		)
 
